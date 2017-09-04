@@ -8,10 +8,13 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import AuthorizedRoute from './AuthorizedRoute';
 import PrimaryLayout from './layouts/PrimaryLayout';
 
+import AppHomePage from './pages/AppHomePage';
+
 const App = props => (
   <BrowserRouter>
     <Switch>
-        <Route path="/app" component={PrimaryLayout} />
+      <AuthorizedRoute path="/app" component={PrimaryLayout} />
+      <Route path="/" component={AppHomePage} />
     </Switch>
   </BrowserRouter>
 )
