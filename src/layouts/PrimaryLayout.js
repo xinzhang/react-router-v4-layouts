@@ -7,7 +7,9 @@ import AppHomePage from '../pages/AppHomePage'
 import UserSubLayout from './UserSubLayout'
 import ProductSubLayout from './ProductSubLayout'
 
-const PrimaryLayout = ({ match }) => (
+const PrimaryLayout = ({ match }) => {
+  console.log(match);
+  return(
   <div className="primary-layout">
     <PrimaryHeader />
     <main>
@@ -19,6 +21,6 @@ const PrimaryLayout = ({ match }) => (
       </Switch>
     </main>
   </div>
-)
+)}
 
 export default PrimaryLayout
